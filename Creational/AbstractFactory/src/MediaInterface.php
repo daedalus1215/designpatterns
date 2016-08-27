@@ -2,11 +2,19 @@
 namespace Creational\AbstractFactory;
 
 /**
- * Description of MediaInterface
+ * Interface MediaInterface.
+ * 
+ * This contract is not part of the pattern, in general case, each cmponent are not related.
  *
- * @author the_admin
+ * @author ladams1776
  */
-class MediaInterface 
+interface MediaInterface 
 {
 
+    /**
+     * some crude rendering from JSON or html output (dependend on concrete class).
+     * 
+     * @return string
+     */
+    public function render();
 }

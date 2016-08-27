@@ -16,7 +16,7 @@ namespace Creational\AbstractFactory;
  * Therefore 4 concrete classes, but the client just needs to know this contract 
  * to build a correct HTTP response (for a HTML page or for an AJAX request). 
  *
- * @author heAdmin
+ * @author ladams1776
  */
 abstract class AbstractFactory 
 {

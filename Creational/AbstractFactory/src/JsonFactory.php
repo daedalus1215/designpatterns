@@ -30,4 +30,15 @@ class JsonFactory extends \Creational\AbstractFactory
     {
         return new Json\Picture($path, $name);
     }
+    /**
+     * Creates a text component.
+     * 
+     * 
+     * @param string $content
+     * @return \Creational\AbstractFactory\Json\Text
+     */
+    public function createText($content)
+    {
+        return new Json\Text($content);
+    }
 }

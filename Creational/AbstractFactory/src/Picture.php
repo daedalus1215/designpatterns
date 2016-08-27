@@ -11,7 +11,7 @@ namespace Creational\AbstractFactory;
  *
  * @author ladams1776
  */
-class Picture 
+abstract class Picture implements MediaInterface
 {
     /**
      *

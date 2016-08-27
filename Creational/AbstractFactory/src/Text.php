@@ -6,7 +6,7 @@ namespace Creational\AbstractFactory;
  *
  * @author the_admin
  */
-class Text 
+abstract class Text implements MediaInterface
 {
     /**
      *

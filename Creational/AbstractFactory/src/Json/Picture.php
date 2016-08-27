@@ -4,10 +4,21 @@ namespace Creational\AbstractFactory\Json;
 use Creational\AbstractFactory\Picture as BasePicture;
 
 /**
- * Description of Picture
+ * Class Picture.
  *
- * @author the_admin
+ * Picture is a concrete image for JSON rendering
  */
-class Picture {
-    //put your code here
+class Picture extends BasePicture
+{
+    
+    /**
+     * some crude rendering from JSON output.
+     */
+    public function render() 
+    {
+        return json_encode(array(
+            'title' => $this->name,
+            'path'  => $this->path
+        ));
+    }
 }

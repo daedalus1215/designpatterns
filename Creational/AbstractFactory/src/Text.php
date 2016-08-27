@@ -4,7 +4,7 @@ namespace Creational\AbstractFactory;
 /**
  * Class Text.
  *
- * @author the_admin
+ * @author ladams1776
  */
 abstract class Text implements MediaInterface
 {

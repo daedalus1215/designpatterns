@@ -1,18 +1,29 @@
 <?php
 
 namespace Creational\AbstractFactory;
+
+require_once(__DIR__ . '\Factories\HtmlFactory.php');
+require_once(__DIR__ . '\Factories\JsonFactory.php');
+require_once(__DIR__ . '\Factories\AbstractFactory.php');
+
+
+use Creational\AbstractFactory\Factories\AbstractFactory;
+use Creational\AbstractFactory\Factories\HtmlFactory;
+use Creational\AbstractFactory\Factories\JsonFactory;
+use PHPUnit\Framework\TestCase;
+//require_once('autoload.php');
 /**
  * AbstractFactoryTest tests concrete factories.
  *
  * @author the_admin
  */
-class AbstractFactoryTest extends \PHPUnit\Framework\TestCase
+class AbstractFactoryTest extends TestCase
 {
     public function getFactories()
     {
         return array(
-            array(new Factories\JsonFactory()),
-            array(new Factories\HtmlFactory())
+            array(new JsonFactory()),
+            array(new HtmlFactory())
         );
     }
     

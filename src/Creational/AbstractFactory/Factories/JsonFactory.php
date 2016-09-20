@@ -1,6 +1,8 @@
 <?php
 
 namespace Creational\AbstractFactory\Factories;
+use Creational\AbstractFactory\Json\Picture;
+use Creational\AbstractFactory\Json\Text;
 
 /**
  * Class JsonFactory
@@ -22,7 +24,8 @@ class JsonFactory extends AbstractFactory
      */
     public function createPicture($path, $name = '') 
     {
-        return new Json\Picture($path, $name);
+        return new Picture($path, $name);
+//        return new Json\Picture($path, $name);
     }
     /**
      * Creates a text component.
@@ -33,7 +36,7 @@ class JsonFactory extends AbstractFactory
      */
     public function createText($content)
     {
-        return new Json\Text($content);
+        return new Text($content);
     }
     
     

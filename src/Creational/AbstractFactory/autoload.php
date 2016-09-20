@@ -1,10 +1,12 @@
-<?php 
-
-
-spl_autoload_register(function ($class_name) {
-    include $class_name . '.php';
-    //include 'Factories\\' . $class_name . '.php';
-});
-
-
-?>
+<?php
+spl_autoload_register(
+    function($class) {
+        static $classes = null;
+        $cn = strtolower($class);
+        if (isset($classes[$cn])) {
+            require __DIR__ . $classes[$cn];
+        }
+    },
+    true,
+    false
+);

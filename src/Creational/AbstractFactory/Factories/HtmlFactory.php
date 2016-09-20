@@ -5,6 +5,8 @@ namespace Creational\AbstractFactory\Factories;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+use Creational\AbstractFactory\Html\Picture;
+use Creational\AbstractFactory\Html\Text;
 
 /**
  * Description of HtmlFactory
@@ -22,7 +24,7 @@ class HtmlFactory extends AbstractFactory
      */
     public function createPicture($path, $name = '') 
     {
-        return new Html\Picture($path, $name);
+        return new Picture($path, $name);
     }
     
     /**
@@ -33,7 +35,7 @@ class HtmlFactory extends AbstractFactory
      */
     public function createText($content) 
     {
-        return new Html\Text($content);
+        return new Text($content);
     }
 
 }

@@ -33,7 +33,7 @@ class BikeBuilder implements BuilderInterface
      */
     public function addEngine() 
     {
-        
+        $this->bike->setPart('engine', new Parts\Engine());
     }
 
     /**
@@ -41,7 +41,8 @@ class BikeBuilder implements BuilderInterface
      */
     public function addWheel() 
     {
-        
+        $this->bike->setPart('forwardWheel', new Parts\Wheel());
+        $this->bike->setPart('rearWheel', new Parts\Wheel());
     }
 
     /**
@@ -49,7 +50,7 @@ class BikeBuilder implements BuilderInterface
      */
     public function createVehicle() 
     {
-        
+        $this->bike = new Parts\Bike();
     }
     
     /**
@@ -57,7 +58,7 @@ class BikeBuilder implements BuilderInterface
      */
     public function getVehicle() 
     {
-        
+        return $this->bike;
     }
 
 //put your code here

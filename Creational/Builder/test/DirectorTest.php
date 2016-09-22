@@ -6,6 +6,7 @@ use Creational\Builder\BuilderInterface;
 use Creational\Builder\CarBuilder;
 use Creational\Builder\Director;
 
+//require_once('vendor\autoload.php');
 /**
  * DirectorTest tests the builder pattern.
  *
@@ -37,7 +38,7 @@ class DirectorTest
     public function testBuild(BuilderInterface $builder)
     {
         $newVehicle = $this->director->build($builder);
-        $this->assetInstanceOf('Creational\Builder\Parts\Vehicle', $newVehicle);
+        $this->assertInstanceOf('Creational\Builder\Parts\Vehicle', $newVehicle);
     }
     
 }

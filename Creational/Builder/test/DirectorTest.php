@@ -12,9 +12,9 @@ use Creational\Builder\Director;
  *
  * @author theAdmin
  */
-class DirectorTest 
+class DirectorTest extends \PHPUnit\Framework\TestCase
 {
-    protected $director;
+    protected $directory;
     
     protected function setUp()
     {

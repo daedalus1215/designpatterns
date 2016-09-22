@@ -1,6 +1,8 @@
 <?php
+
 namespace Creational\AbstractFactory\Factories;
 
+use Creational\AbstractFactory\Json;
 /**
  * Class JsonFactory
  * 
@@ -33,9 +35,5 @@ class JsonFactory extends AbstractFactory
     public function createText($content)
     {
         return new Json\Text($content);
-    }
-    
-    
-    
-    
+    }            
 }

@@ -1,10 +1,13 @@
 <?php
 namespace Creational\AbstractFactory\test;
 
-require_once('C:\xampp\htdocs\designpatterns\vendor\autoload.php');
+
 
 use Creational\AbstractFactory\Factories\HtmlFactory;
-use PHPUnit\Framework\TestCase;
+use Creational\AbstractFactory\Factories\JsonFactory;
+use Creational\AbstractFactory\Factories\AbstractFactory;
+
+require_once('vendor\autoload.php');
 
 
 /**
@@ -17,7 +20,7 @@ class AbstractFactoryTest extends \PHPUnit\Framework\TestCase//\PHPUnit_Framewor
     public function getFactories()
     {
         return array(
-            //array(new \Creational\AbstractFactory\Factories\JsonFactory()),
+            array(new JsonFactory()),
             array(new HtmlFactory())
         );
     }
@@ -29,7 +32,7 @@ class AbstractFactoryTest extends \PHPUnit\Framework\TestCase//\PHPUnit_Framewor
      * 
      * @dataProvider getFactories
      */
-    public function testComponentCreation(\Creational\AbstractFactory\Factories\AbstractFactory $factory)
+    public function testComponentCreation(AbstractFactory $factory)
     {
         $article = array(
             $factory->createText('Lorem Ipsum'),

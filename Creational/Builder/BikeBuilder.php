@@ -9,7 +9,7 @@
 namespace Creational\Builder;
 
 /**
- * Description of BikeBuilder
+ * BikeBuilder builds bikes
  *
  * @author theAdmin
  */

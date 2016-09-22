@@ -2,7 +2,7 @@
 namespace Creational\Builder;
 
 /**
- * Description of CarBuilder
+ * CarBuilder builds a car.
  *
  * @author theAdmin
  */

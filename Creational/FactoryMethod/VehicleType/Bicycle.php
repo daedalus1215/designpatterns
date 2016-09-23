@@ -1,5 +1,5 @@
 <?php
-namespace Creational\FactoryMethod;
+namespace Creational\FactoryMethod\VehicleType;
 
 
 

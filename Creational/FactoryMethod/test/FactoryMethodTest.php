@@ -27,7 +27,7 @@ class FactoryMethodTest extends \PHPUnit\Framework\TestCase
      * 
      * @dataProvider getShop
      */
-    public function testCreation(FactoryMethod $shop)
+    public function testCreation(\Creational\FactoryMethod\FactoryMethod $shop)
     {
         // this test method acts as a client for the factory. We don't care
         // about the factory, all we know is it can produce a vehicle.
@@ -42,7 +42,7 @@ class FactoryMethodTest extends \PHPUnit\Framework\TestCase
      * @expectedException \InvalidArgumentException
      * @expectedExceptionMessage spaceship is not a valid vehicle
      */
-    public function testUnknownType(FactoryMethod $shop)
+    public function testUnknownType(\Creational\FactoryMethod\FactoryMethod $shop)
     {
         $shop->create('spaceship');
     }    

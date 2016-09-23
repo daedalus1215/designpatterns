@@ -14,7 +14,7 @@
         "psr-4": {
             "Creational\\AbstractFactory\\" : "Creational/AbstractFactory/",
             "Creational\\Builder\\" : "Creational/Builder/",
-            "Creational\\FactoryMethod\\" : "Creational/FactoryMethod/"
+            "Creational\\FactoryMethod\\" : "Creational/FactoryMethod/src/"
         }
     }
 }

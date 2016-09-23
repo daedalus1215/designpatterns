@@ -3,7 +3,7 @@ namespace Creational\FactoryMethod\VehicleType;
 
 
 
-class Bicycle implements VehicleInterface
+class Bicycle implements \Creational\FactoryMethod\VehicleInterface
 {
     /**
      *

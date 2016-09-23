@@ -1,5 +1,5 @@
 <?php
-namespace Creational\FactoryMethod;
+namespace Creational\FactoryMethod\Factory;
 /**
  * Description of FactoryMethod
  *
@@ -27,7 +27,7 @@ abstract class FactoryMethod
      * @return VehicleInterface a new vehicle.
      */
     public function create($type)
-    {
+    {        
         $obj = $this->createVehicle($type);
         $obj->setColor('#f00');
         

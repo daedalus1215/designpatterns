@@ -1,6 +1,10 @@
 <?php
 namespace Creational\FactoryMethod\Factory;
 
+use Creational\FactoryMethod\VehicleType\Bicycle;
+use Creational\FactoryMethod\VehicleType\Porsche;
+use InvalidArgumentException;
+
 /**
  * Description of GermanFactory
  *
@@ -17,6 +21,7 @@ class GermanFactory extends FactoryMethod
         {
             case parent::CHEAP:
                 return new Bicycle();
+                break;
             case parent::FAST:
                 $obj = new Porsche();
                 // we can specialize the way we want some concrete Vehicle since
@@ -24,8 +29,9 @@ class GermanFactory extends FactoryMethod
                 $obj->addTuningAMG();
                 
                 return $obj;
+                break;
             default:
-                throw new \InvalidArgumentException("$type is not a valid Vehicle");
+                throw new InvalidArgumentException("$type is not a valid Vehicle");
         }
     }
 }

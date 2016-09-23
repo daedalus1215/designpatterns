@@ -6,7 +6,7 @@ namespace Creational\FactoryMethod\VehicleType;
  *
  * @author theAdmin
  */
-class Ferrari implements VehicleInterface
+class Ferrari implements \Creational\FactoryMethod\VehicleInterface
 {
     /**
      *

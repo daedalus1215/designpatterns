@@ -1,13 +1,19 @@
 <?php
 namespace Creational\FactoryMethod\test;
 
+use Creational\FactoryMethod\Factory\FactoryMethod;
+use Creational\FactoryMethod\Factory\GermanFactory;
+use Creational\FactoryMethod\Factory\ItalianFactory;
+use InvalidArgumentException;
+use PHPUnit\Framework\TestCase;
+
 
 require_once('vendor\autoload.php');
 /**
  * Description of FactoryMethodTest
  *
  */
-class FactoryMethodTest extends \PHPUnit\Framework\TestCase
+class FactoryMethodTest extends TestCase
 {
     protected $types = array(
         FactoryMethod::CHEAP,
@@ -18,8 +24,8 @@ class FactoryMethodTest extends \PHPUnit\Framework\TestCase
     public function getShop()
     {
         return array(
-            array(new \Creational\FactoryMethod\Factory\GermanFactory()),
-            array(new \Creational\FactoryMethod\Factory\ItalianFactory())
+            array(new GermanFactory()),
+            array(new ItalianFactory())
         );
     }
               
@@ -27,7 +33,7 @@ class FactoryMethodTest extends \PHPUnit\Framework\TestCase
      * 
      * @dataProvider getShop
      */
-    public function testCreation(\Creational\FactoryMethod\FactoryMethod $shop)
+    public function testCreation(FactoryMethod $shop)
     {
         // this test method acts as a client for the factory. We don't care
         // about the factory, all we know is it can produce a vehicle.
@@ -39,11 +45,11 @@ class FactoryMethodTest extends \PHPUnit\Framework\TestCase
     
     /**
      * @dataProvider getShop
-     * @expectedException \InvalidArgumentException
+     * @expectedException InvalidArgumentException
      * @expectedExceptionMessage spaceship is not a valid vehicle
      */
-    public function testUnknownType(\Creational\FactoryMethod\FactoryMethod $shop)
+    public function testUnknownType(FactoryMethod $shop)
     {
-        $shop->create('spaceship');
+        $shop->create('spaceship');        
     }    
 }

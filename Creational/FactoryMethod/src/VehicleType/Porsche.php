@@ -2,7 +2,7 @@
 namespace Creational\FactoryMethod\VehicleType;
 
 
-class Porsche implements VehicleInterface
+class Porsche implements \Creational\FactoryMethod\VehicleInterface
 {
     /**
      * @var string
